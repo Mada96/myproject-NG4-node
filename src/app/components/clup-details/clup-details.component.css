@@ -1,0 +1,11 @@
+td,th{
+   padding: 10px; 
+   background-color: lightyellow;
+}
+th{
+    margin: auto;
+    background-color: lightblue;  
+}
+
+
+

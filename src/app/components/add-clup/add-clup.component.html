@@ -1,0 +1,16 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="col-xs-4" >
+  <h3>Insert Clup</h3>
+  <input  #name type="text" placeholder="Clup Name" class="form-control"/><br/>
+  <input  #address type="text" placeholder="Clup Address" class="form-control"/><br/>
+  
+  <button (click)="insertClupinDB(name.value,address.value)" class="btn btn-primary" >Save</button>
+</div>
+</body>

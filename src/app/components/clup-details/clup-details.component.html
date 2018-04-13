@@ -1,0 +1,45 @@
+<div class="col-md-8">
+  <table class=".table">
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+    </tr>
+    <tr>
+      <td>{{ClupID.member_clup.name}}</td>
+      <td>{{ClupID.member_clup.address }}</td>
+    </tr>
+    </table>
+    <hr>
+    <div appDetailsDirective style="text-align:center">
+    <h3>Members</h3>
+    
+    </div>
+    <hr>
+    <table class=".table">
+    <tr>
+      <th>
+        Name
+      </th>
+
+      <th>
+        Age
+      </th>
+      <th>
+        Type
+      </th>
+    </tr>
+    <tr *ngFor="let member of ClupID.member_clup.members" >
+      <td>
+        {{member.name}}
+      </td>
+      <td>
+        {{member.age}}
+      </td>
+      <td>
+        {{member.type}}
+      </td>
+      </tr>
+  </table>
+
+</div>
+<br>

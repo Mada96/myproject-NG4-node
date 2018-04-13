@@ -1,0 +1,12 @@
+.insertMember{
+   background-color: lightblue;
+   display: block;
+   border-radius: 10px;
+}
+input{
+    width:90%;
+    margin: 5px auto;
+}
+/* h3{
+    margin: auto;
+} */

@@ -3,7 +3,7 @@ const bodyparser = require('body-parser');
 const dbConnection = require('./config/config');
 
 //Models Variables
-const mymodels = require('./Schema/ClupMemberSchema');
+const mymodels = require('./schema/ClupMemberSchema');
 const mongoose = require('mongoose');
 
 //open connection 

@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const dbConnection = require('./config/config');
-
+const path = require('path');
 //Models Variables
 const mymodels = require('./schema/ClupMemberSchema');
 const mongoose = require('mongoose');
@@ -11,6 +11,8 @@ dbConnection();
 
 const app = express();
 app.use(bodyparser.json());
+app.use(express.static(path.join(__dirname, './../dist')));
+
 
 app.post('/api/db/addClup', (req, res) => {
     console.log(req);

@@ -84,7 +84,7 @@ app.get('/api/db/getAllClups', (req, res) => {
 
 //Front-End
 app.use('/*', (req, res, next) => {
-    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+    res.sendFile(path.join(__dirname, './../dist', 'index.html'));
   });
 //PORT
 const port = process.env.PORT || 9243;

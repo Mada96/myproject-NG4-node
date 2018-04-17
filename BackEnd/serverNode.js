@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const dbConnection = require('./config/config');
-const server = require('http').createServer(app);
+
 //Models Variables
 const mymodels = require('./Schema/ClupMemberSchema');
 const mongoose = require('mongoose');
@@ -10,7 +10,6 @@ const mongoose = require('mongoose');
 dbConnection();
 
 const app = express();
-
 app.use(bodyparser.json());
 
 app.post('/api/db/addClup', (req, res) => {
@@ -89,7 +88,7 @@ app.use('/*', (req, res, next) => {
 //PORT
 const port = process.env.PORT || 9243;
 // listen to the port and logging verifying msg
-server.listen(port, () => {
+app.listen(port, () => {
   console.log("server is listening on port: ", port);
 });
 // app.listen(7777);

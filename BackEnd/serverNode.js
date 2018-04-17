@@ -1,9 +1,11 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const dbConnection = require('./config/config');
+const server = require('http').createServer(app);
 //Models Variables
 const mymodels = require('./Schema/ClupMemberSchema');
 const mongoose = require('mongoose');
+
 //open connection 
 dbConnection();
 
@@ -79,4 +81,15 @@ app.get('/api/db/getAllClups', (req, res) => {
         console.log(res);
     });
 });
-app.listen(7777);
+
+//Front-End
+app.use('/*', (req, res, next) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  });
+//PORT
+const port = process.env.PORT || 9243;
+// listen to the port and logging verifying msg
+server.listen(port, () => {
+  console.log("server is listening on port: ", port);
+});
+// app.listen(7777);

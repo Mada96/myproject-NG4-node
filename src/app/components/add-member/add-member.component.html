@@ -2,7 +2,7 @@
   <h3 style="text-align:center">Insert Member</h3>
   <input required #names type="text" placeholder="Member Name" class="form-control"/><br/>
   <input required  #address type="text" placeholder="Enter Member Address" class="form-control"/><br/>
-  <input  #age type="text" placeholder="Member Age" class="form-control"/><br/>
+  <input  #age min="10" max=60 type="number" placeholder="Member Age" class="form-control"/><br/>
   <input  #type type="text" placeholder="Member Type" class="form-control"/><br/>
   <select class="form-control" name="Clups" ng-model="selected">
     <option value="0" disabled>Select clup to join</option>

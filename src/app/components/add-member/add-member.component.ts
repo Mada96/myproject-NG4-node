@@ -20,6 +20,11 @@ export class AddMemberComponent implements OnInit {
   }
   
   SaveMember(name: String, address: String, age: Number,type: String) {
+    if(name == "" || address == "" || age<=0 || type == "")
+    {
+      alert("Invalid input !");
+    }
+    else{
     var s =(document.getElementsByTagName("select") as HTMLSelectElement)[0];
     var selected = s.options[s.selectedIndex].value;
     console.log(selected);
@@ -28,6 +33,9 @@ export class AddMemberComponent implements OnInit {
       .addMember(selected, name, address, age,type)
       .subscribe((response) => {
       });
+      alert("Member saved successfully in club "+s.options[s.selectedIndex].text+"\n close and view clubs")
+    }
+
     
   }
   
